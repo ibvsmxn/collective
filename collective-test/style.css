@@ -1,0 +1,96 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background: white;
+  margin: 0;
+}
+body header {
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+body header nav {
+  width: 100%;
+}
+body header nav ul {
+  display: flex;
+  padding: 0;
+  float: right;
+}
+body header nav ul li {
+  list-style: none;
+  display: flex;
+  padding: 0 10px;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s all ease;
+}
+body header nav ul li a:hover {
+  border-bottom: 2px solid white;
+}
+body section {
+  width: 95%;
+  margin: 0 auto;
+}
+body section.hero {
+  background-image: url(images/hero.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+body section.hero .hero-text {
+  color: white;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  body section.hero .hero-text {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  body section.hero .hero-text {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body section.hero .hero-text {
+    width: 30%;
+  }
+}
+body section.hero .hero-text h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+}
+body section.hero .hero-text p {
+  line-height: 2em;
+}
+body footer {
+  text-align: center;
+}
+body footer .logo-section {
+  background: black;
+  padding: 30px 0;
+}
+body footer .legal-section {
+  background-color: #182629;
+  color: white;
+  padding: 20px;
+}
+
+.contain {
+  padding: 0 5vw;
+  width: 100%;
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */

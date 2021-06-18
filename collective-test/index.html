@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Embedding Open Sans font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Including my own compiled CSS file-->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Great IPA - Collective Test</title>
+  </head>
+  <body>
+    <header> 
+        <div class="contain"> <!-- Because you guys love Bootstrap so much -->
+            <a class="logo"><img src="images/logo.png"</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Beers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+
+    <section class="hero">
+        <div class="contain"> 
+            <div class="hero-text">
+                <h1>Great IPA</h1>
+                <p>Some hops is plowed. An often hairy girl scout thoroughly makes a pact with the Honey Brown over the Budweiser. A blood clot makes a pact with the discusting satellite brewery. A lover about the Pilsner Urquell takes a peek at the bottle of beer. The coors light, the crank case of an IPA, and a Citra Ninja are what made America great!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="beers">
+        <!-- Just bear in mind, i've never done API's before, so here goes nothing-->
+
+        <!-- 
+            1. Request the API 
+            2. It'll be returned in a JSON format
+            3. I'll then need to filter out what I don't want
+            4. Somehow have what I want rendered on this page
+        -->
+
+        <div id="api-test"></div>
+    </section>
+
+    <footer>
+        <div class="logo-section">
+            <img src="images/logo.png">
+        </div>
+        <div class="legal-section">
+            Copyright Collective 2021
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

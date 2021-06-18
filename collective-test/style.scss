@@ -1,0 +1,106 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: white;
+    margin: 0;
+
+    header {
+        background: rgba(0,0,0,0.75);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+
+        nav {
+            width: 100%;
+
+            ul {
+                display: flex;
+                padding: 0;
+                float: right;
+
+                li {
+                    list-style: none;
+                    display: flex;
+                    padding: 0 10px;
+                    
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        text-transform: uppercase;
+                        padding: 10px 0;
+                        border-bottom: 2px solid transparent;
+                        transition: 0.3s all ease;
+
+                        &:hover {
+                            border-bottom: 2px solid white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        width: 95%;
+        margin: 0 auto;
+
+        &.hero {
+            background-image: url(images/hero.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 800px;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+
+            .hero-text {
+                color: white;
+                width: 100%;
+
+                @media screen and (min-width: 768px) {
+                    width: 50%;
+                }
+
+                @media screen and (min-width: 992px) {
+                    width: 40%;
+                }
+
+                @media screen and (min-width: 1200px) {
+                    width: 30%;
+                }
+
+                h1 {
+                    font-size: 3.5em;
+                    margin-bottom: 0.5em;
+                }
+
+                p {
+                    line-height: 2em;
+                }
+            }
+        }
+    }
+
+    footer {
+        text-align: center;
+
+        .logo-section {
+            background: black;
+            padding: 30px 0;
+        }
+
+        .legal-section {
+            background-color: #182629;
+            color: white;
+            padding: 20px;
+        }
+    }
+}
+
+.contain {
+    padding: 0 5vw;
+    width: 100%;
+    display: flex;
+}
