@@ -75,6 +75,9 @@ body section.hero .hero-text h1 {
 body section.hero .hero-text p {
   line-height: 2em;
 }
+body section.beers {
+  transition: 0.3s all ease;
+}
 body section.beers #beers_0 {
   padding: 3em 0;
   padding-bottom: 5em;
@@ -142,6 +145,9 @@ body section.beers article.beverage-box.active .heart.transparent {
 }
 body section.beers article.beverage-box.active .heart.solid {
   opacity: 1;
+}
+body section.beers article.beverage-box:hover {
+  transition: 0.3s all ease;
 }
 body footer {
   text-align: center;

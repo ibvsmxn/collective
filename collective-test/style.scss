@@ -84,6 +84,7 @@ body {
         }
 
         &.beers {
+            transition: 0.3s all ease;
 
             #beers_0 {
                 padding: 3em 0;
@@ -172,6 +173,11 @@ body {
                             opacity: 1;
                         }
                     }
+                }
+
+                &:hover {
+                    // background: rgb(219, 219, 219);
+                    transition: 0.3s all ease;
                 }
             }
 

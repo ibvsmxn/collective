@@ -60,6 +60,7 @@ function show(data) {
 }
 
 // Add 'active' class to beer when clicked on
+
 var header = document.getElementById("beers_0");
 var beers = header.getElementsByClassName("beverage-box");
 for (var i = 0; i < beers.length; i++) {
@@ -71,3 +72,5 @@ for (var i = 0; i < beers.length; i++) {
   this.className += " active";
   });
 }
+
+console.log('beers');
