@@ -4,12 +4,13 @@ body {
     margin: 0;
 
     header {
-        background: rgba(0,0,0,0.75);
+        background: rgba(0, 0, 0, 0.8);
         position: fixed;
         width: 100%;
         top: 0;
         left: 0;
         display: flex;
+        z-index: 10;
 
         nav {
             width: 100%;
@@ -42,7 +43,7 @@ body {
     }
 
     section {
-        width: 95%;
+        width: calc(100% - 6em);
         margin: 0 auto;
 
         &.hero {
@@ -81,6 +82,101 @@ body {
                 }
             }
         }
+
+        &.beers {
+
+            #beers_0 {
+                padding: 3em 0;
+                padding-bottom: 5em;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            article.beverage-box {
+                width: 100%;
+                display: inline-block;
+
+                @media screen and (min-width: 768px) {
+                    width: 45%;
+                    margin: 0 2.5%;
+                    padding-bottom: 3em;
+                }
+
+                @media screen and (min-width: 992px) {
+                    width: 30%;
+                    margin: 0 calc(100%/100);
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 1.875em;
+
+                    @media screen and (min-width: 768px) {
+                        // height: 75%;
+
+                        height: 35%;
+                        margin-bottom: 10%;
+                        overflow-y: scroll;
+
+                        // I was honestly stumped at how to get all the paragraph elements to be the same height, taking into account how lengthy text can be.
+                        // If all descriptions were as short as the one in the pSD, I doubt I'd have this issue
+                    }
+
+                }
+
+                .image-bg {
+                    width: 100%;
+                    background-color: #2897b1;
+                    text-align: center;
+
+                    .hearts {
+                        position: absolute;
+                        margin: 15px;
+
+                        .heart {
+                            position: relative;
+                            right: 0;
+                            top: 0;
+
+                            &.transparent {
+                                position: absolute;
+                            }
+
+                            &.solid {
+                                opacity: 0;
+                            }
+                        }
+                    }  
+                }
+                img {
+                    &.beverage {
+                        padding: 15px;
+                        max-height: 125px;
+
+                        p {
+                            margin: 0;
+                        }
+                    }
+
+                    
+                }
+
+                &.active {
+                    .heart {
+                        &.transparent {
+                            opacity: 0;
+                        }
+
+                        &.solid {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            
+        }
     }
 
     footer {
@@ -100,7 +196,7 @@ body {
 }
 
 .contain {
-    padding: 0 5vw;
+    padding: 0 3em;
     width: 100%;
     display: flex;
 }
