@@ -1,10 +1,11 @@
-Candidate: D'André Phillips
+# D'André Phillips
+
 Collective Technical Test
 
-OPTION 1
-How I usually do this to run this is by downloading & installing XAMPP and putting the 'collective' folder under htdocs.
+## OPTION 1
+How I usually do this to run this is by downloading & installing XAMPP and putting the 'collective' folder under the 'htdocs' folder.
 
-OPTION 2
+## OPTION 2
 Although just running this folder as it is irrespective of its location should also work fine, as this isn't coded in PHP. Just ensure 'index.html' is opened in a browser and not an IDE.
 
 The page is responsive across all screen sizes. The fact I got the API working in the first place is amazing - considering this is my first ever time doing this!
