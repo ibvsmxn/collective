@@ -1,11 +1,13 @@
 Collective Test
 
-The safest way to run this is by downloading XAMPP and putting the 'collective' folder under htdocs
-Make sure all 3 servers are running! 
+OPTION 1
+How I usually do this to run this is by downloading & installing XAMPP and putting the 'collective' folder under htdocs.
 
-Although just running this folder as it is should also work fine, as this isn't coded in PHP 
+OPTION 2
+Although just running this folder as it is irrespective of its location should also work fine, as this isn't coded in PHP. Just ensure 'index.html' is opened in a browser and not an IDE.
 
-The page is responsive across all screen sizes, and I would've liked to do a LOT more, but the fact I got the API working in the first place is amazing - considering this is my first ever time doing this.
-I reckon if I had more time, I would've attempted the bonus tasks as well.
+The page is responsive across all screen sizes. The fact I got the API working in the first place is amazing - considering this is my first ever time doing this!
 
-You'll see in the JS code that I was trying to get an "active" state to be applied to the beers when they're selected 
+The page will look like this (on desktop)
+
+[Screenshot 2021-06-19 at 19 44 58](https://user-images.githubusercontent.com/32004621/122652448-d6603300-d136-11eb-88f3-0c778ce180e1.png)
