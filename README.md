@@ -10,4 +10,4 @@ The page is responsive across all screen sizes. The fact I got the API working i
 
 The page will look like this (on desktop)
 
-[Screenshot 2021-06-19 at 19 44 58](https://user-images.githubusercontent.com/32004621/122652448-d6603300-d136-11eb-88f3-0c778ce180e1.png)
+![Screenshot 2021-06-19 at 19 44 58](https://user-images.githubusercontent.com/32004621/122652448-d6603300-d136-11eb-88f3-0c778ce180e1.png)
