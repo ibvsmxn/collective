@@ -14,18 +14,73 @@ body header {
 }
 body header nav {
   width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+body header nav * * {
+  transition: 0.5s all ease;
+}
+body header nav .menu-toggle {
+  background: transparent;
+  border: none;
+}
+body header nav .menu-toggle .line {
+  display: block;
+  background: white;
+  margin: 10px;
+  width: 30px;
+  height: 2px;
+}
+@media screen and (min-width: 768px) {
+  body header nav .menu-toggle {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  body header nav {
+    display: block;
+  }
 }
 body header nav ul {
-  display: flex;
   padding: 0;
   float: right;
+  position: absolute;
+  background: #000000cf;
+  height: 100vh;
+  top: 79px;
+  width: 100%;
+  margin: 0;
+  right: -100%;
+  transition: 0.5s all ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  body header nav ul {
+    display: flex;
+    padding: 0;
+    float: right;
+    position: initial;
+    height: auto;
+    background: transparent;
+    top: 0;
+    width: auto;
+    margin: revert;
+  }
 }
 body header nav ul li {
   list-style: none;
   display: flex;
-  padding: 0 10px;
+  padding: 0 3em;
+}
+@media screen and (min-width: 768px) {
+  body header nav ul li {
+    padding: 0 10px;
+  }
 }
 body header nav ul li a {
+  text-align: left;
+  width: 50%;
+  font-size: 2em;
+  margin-top: 0.5em;
   text-decoration: none;
   color: white;
   text-transform: uppercase;
@@ -33,8 +88,36 @@ body header nav ul li a {
   border-bottom: 2px solid transparent;
   transition: 0.3s all ease;
 }
+@media screen and (min-width: 768px) {
+  body header nav ul li a {
+    width: 100%;
+    font-size: 1em;
+    margin-top: 0;
+  }
+}
 body header nav ul li a:hover {
   border-bottom: 2px solid white;
+}
+@media screen and (min-height: 576px) {
+  body header nav ul li:first-of-type {
+    margin-top: 25vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  body header nav ul li:first-of-type {
+    margin-top: 0;
+  }
+}
+body header nav.open ul {
+  right: 0;
+  transition: 0.5s all ease-in-out;
+}
+body header nav.open .menu-toggle .line:nth-of-type(1) {
+  transform: rotate(-45deg);
+}
+body header nav.open .menu-toggle .line:nth-of-type(2) {
+  transform: rotate(45deg);
+  margin-top: -12px;
 }
 body section {
   width: calc(100% - 6em);
@@ -84,10 +167,23 @@ body section.beers #beers_0 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+@media screen and (min-width: 992px) {
+  body section.beers #beers_0 {
+    padding-bottom: 3em;
+  }
 }
 body section.beers article.beverage-box {
   width: 100%;
   display: inline-block;
+  max-width: 500px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+body section.beers article.beverage-box * * {
+  transition: 0.3s all ease;
 }
 @media screen and (min-width: 768px) {
   body section.beers article.beverage-box {
@@ -109,7 +205,7 @@ body section.beers article.beverage-box p {
 @media screen and (min-width: 768px) {
   body section.beers article.beverage-box p {
     height: 35%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     overflow-y: scroll;
   }
 }
@@ -119,13 +215,13 @@ body section.beers article.beverage-box .image-bg {
   text-align: center;
 }
 body section.beers article.beverage-box .image-bg .hearts {
-  position: absolute;
+  position: sticky;
   margin: 15px;
 }
 body section.beers article.beverage-box .image-bg .hearts .heart {
-  position: relative;
+  position: absolute;
   right: 0;
-  top: 0;
+  top: 14px;
 }
 body section.beers article.beverage-box .image-bg .hearts .heart.transparent {
   position: absolute;
@@ -135,19 +231,24 @@ body section.beers article.beverage-box .image-bg .hearts .heart.solid {
 }
 body section.beers article.beverage-box img.beverage {
   padding: 15px;
-  max-height: 125px;
+  max-height: 140px;
 }
 body section.beers article.beverage-box img.beverage p {
   margin: 0;
 }
-body section.beers article.beverage-box.active .heart.transparent {
+body section.beers article.beverage-box:hover {
+  filter: brightness(1.25);
+  transition: 0.3s all ease;
+}
+body section.beers article.beverage-box.active, body section.beers article.beverage-box:active {
+  filter: brightness(1.125);
+  transition: 0.3s all ease;
+}
+body section.beers article.beverage-box.active .heart.transparent, body section.beers article.beverage-box:active .heart.transparent {
   opacity: 0;
 }
-body section.beers article.beverage-box.active .heart.solid {
-  opacity: 1;
-}
-body section.beers article.beverage-box:hover {
-  transition: 0.3s all ease;
+body section.beers article.beverage-box.active .heart.solid, body section.beers article.beverage-box:active .heart.solid {
+  opacity: 1 !important;
 }
 body footer {
   text-align: center;
@@ -166,6 +267,8 @@ body footer .legal-section {
   padding: 0 3em;
   width: 100%;
   display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */

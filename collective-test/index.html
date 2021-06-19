@@ -17,9 +17,13 @@
   <body>
     <header> 
         <div class="contain"> <!-- Because you guys love Bootstrap so much -->
-            <a class="logo"><img src="images/logo.png"</a>
-            <nav>
-                <ul>
+            <a class="logo"><img src="images/logo.png"></a>
+            <nav id="mainNav">
+                <button class="menu-toggle" onclick="menuToggler()">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+                <ul id="menuList">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Beers</a></li>
                     <li><a href="#">Contact</a></li>
@@ -51,6 +55,7 @@
         <div id="api-test"></div>
 
         <div id="beers_0"></div>
+        
     </section>
 
     <footer>

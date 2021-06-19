@@ -57,20 +57,51 @@ function show(data) {
     }
     // Setting innerHTML as tab variable
     document.getElementById("beers_0").innerHTML = tab;
+    console.log('API Data has been returned successfully.');
 }
 
 // Add 'active' class to beer when clicked on
 
 var header = document.getElementById("beers_0");
 var beers = header.getElementsByClassName("beverage-box");
-for (var i = 0; i < beers.length; i++) {
-  beers[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  if (current.length > 0) { 
-    current[0].className = current[0].className.replace(" active", "");
-  }
-  this.className += " active";
-  });
-}
 
-console.log('beers');
+for (var i = 0; i < beers.length; i++) {
+    beers[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+  
+      // If there's no active class
+      if (current.length > 0) {
+        current[0].className = current[0].className.replace(" active", "");
+      }
+  
+      // Add the active class to the current/clicked button
+      this.className += " active";
+    });
+  }
+
+  // So here's my issue with the above code - I've tested this code with the results being hardcoded (instead of being populated) and the .active class works - but not when it's been dynamically populated.
+
+  // So I thought about toggling between the active class with the clicks being detected, but inside the container where the beer results are generated.
+
+  document.querySelector("#beers_0").onclick= function(event) {
+
+    if (event===undefined) event= window.event;
+    var target= 'target' in event? event.target : event.srcElement;
+
+    target.classList.toggle('active');
+
+    console.log('Active Class Toggled');
+};
+
+// So while this technically works - it'll only work if you click on certain parts of the article (i.e. the very top and bottom)
+
+
+// Toggle Menu on mobile 
+
+function menuToggler() {
+    var menu = document.getElementById("mainNav");
+
+    menu.classList.toggle("open");
+
+    console.log('Menu Toggled');
+ }
