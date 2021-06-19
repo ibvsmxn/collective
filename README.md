@@ -1,4 +1,5 @@
-Collective Test
+Candidate: D'André Phillips
+Collective Technical Test
 
 OPTION 1
 How I usually do this to run this is by downloading & installing XAMPP and putting the 'collective' folder under htdocs.
