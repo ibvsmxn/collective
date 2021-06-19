@@ -8,6 +8,6 @@ Although just running this folder as it is irrespective of its location should a
 
 The page is responsive across all screen sizes. The fact I got the API working in the first place is amazing - considering this is my first ever time doing this!
 
-The page will look like this (on desktop)
+To give you an idea of that the selected beer will look like on desktop - see the screenshot.
 
 ![Screenshot 2021-06-19 at 19 44 58](https://user-images.githubusercontent.com/32004621/122652448-d6603300-d136-11eb-88f3-0c778ce180e1.png)
