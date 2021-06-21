@@ -12,8 +12,7 @@
 // console.log('Fetched API');
 
 
-// I'll be totally honest here, I've used a boilerplate for this, and this isn't me trying to gain an unfair advantage, it's literally because this is my very first time actually learning about API's
-// However, I have made a few changes onf my own to this code (especially near the innerhML render) whilst I learn more about API's by the hour
+
 
 // api url
 const api_url = 
